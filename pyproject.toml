@@ -9,7 +9,7 @@ description = "Standalone packaging of RDUCB from Huawei HEBO for research reuse
 readme = "README.md"
 requires-python = ">=3.8"
 license = {text = "MIT"}
-authors = [{name = "Anna", email = "anna.nazarova@campus.lmu.de"}]
+authors = [{name = "Anna"}]
 keywords = ["rducb", "bayesian-optimization", "hebo", "ucb"]
 
 dependencies = [
@@ -21,7 +21,7 @@ dependencies = [
   "pyyaml",
   "ruamel.yaml",
   "coloredlogs",
-  "ConfigSpace==0.4.11",
+  "configspace==0.6.1",
   "cma",
   "imageio",
   "disjoint-set==0.6.2",
