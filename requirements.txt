@@ -1,0 +1,20 @@
+# core scientific deps
+numpy>=1.18
+scipy>=1.4
+scikit-learn>=0.24
+networkx>=2.4
+psutil>=5.7
+pyyaml
+ruamel.yaml
+coloredlogs
+ConfigSpace==0.4.11
+cma
+imageio
+disjoint-set==0.6.2
+pid==3.0.3
+HEBO>=0.3.2
+
+# optional
+# GPy==1.9.9
+# GPyOpt==1.2.6
+# boto3>=1.14.14
