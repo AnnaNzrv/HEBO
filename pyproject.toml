@@ -13,7 +13,7 @@ authors = [{name = "Anna"}]
 keywords = ["rducb", "bayesian-optimization", "hebo", "ucb"]
 
 dependencies = [
-  "numpy>=1.18",
+  "numpy>=1.26.4",
   "scipy>=1.4",
   "scikit-learn>=0.24",
   "networkx>=2.4",
@@ -21,7 +21,7 @@ dependencies = [
   "pyyaml",
   "ruamel.yaml",
   "coloredlogs",
-  "configspace==0.6.1",
+  "ConfigSpace==0.6.1",
   "cma",
   "imageio",
   "disjoint-set==0.6.2",

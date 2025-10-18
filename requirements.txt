@@ -1,5 +1,5 @@
 # core scientific deps
-numpy>=1.18
+numpy>=1.26.4
 scipy>=1.4
 scikit-learn>=0.24
 networkx>=2.4
@@ -7,7 +7,7 @@ psutil>=5.7
 pyyaml
 ruamel.yaml
 coloredlogs
-ConfigSpace==0.4.11
+ConfigSpace==0.6.1
 cma
 imageio
 disjoint-set==0.6.2
