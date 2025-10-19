@@ -31,14 +31,10 @@ dependencies = [
 
 [project.optional-dependencies]
 extras = [
-  "GPy==1.9.9",
-  "GPyOpt==1.2.6",
-  "boto3>=1.14.14",
+  "boto3>=1.14.14"
 ]
 
 [tool.setuptools]
-packages = ["RDUCB"]
-include-package-data = true
+packages = ["rducb"]
+package-dir = { "rducb" = "RDUCB" }
 
-[tool.setuptools.package-data]
-RDUCB = ["*.py", "**/*.py"]

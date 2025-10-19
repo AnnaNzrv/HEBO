@@ -10,19 +10,19 @@ from GPyOpt.models.gpmodel import GPModel
 from GPyOpt.acquisitions import AcquisitionLCB
 import networkx as nx
 import collections
-from myBOModular import MyBOModular
-from myGPModel import MyGPModel
+from rducb.hdbo.myBOModular import MyBOModular
+from rducb.hdbo.myGPModel import MyGPModel
 from GPyOpt.core.task.space import Design_space
-from common import Config
+from rducb.hdbo.common import Config
 import random
 import os
 import pickle
 
 # CLEAN UP?
-from function_optimizer import GraphOverlap, GraphNonOverlap, Tree, GraphFunction, OptimalGraphFunction
-from graph_utils import get_random_graph
+from rducb.hdbo.function_optimizer import GraphOverlap, GraphNonOverlap, Tree, GraphFunction, OptimalGraphFunction
+from rducb.hdbo.graph_utils import get_random_graph
 
-from exceptions import EarlyTerminationException
+from rducb.hdbo.exceptions import EarlyTerminationException
 
 def normalize(v):
     norm=np.linalg.norm(v, ord=1)
@@ -30,8 +30,8 @@ def normalize(v):
         norm=np.finfo(v.dtype).eps
     return v/norm
 
-from datasets import ComponentFunction, SyntheticComponentFunction
-import function_optimizer
+from rducb.hdbo.datasets import ComponentFunction, SyntheticComponentFunction
+import rducb.hdbo.function_optimizer
 
 class MetaLoader(type):
     registry = {}
