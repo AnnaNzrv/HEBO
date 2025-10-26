@@ -29,7 +29,6 @@ dependencies = [
   "ruamel.yaml",
   "coloredlogs",
   "imageio",
-  "botorch==0.6.6",
   "ConfigSpace==0.6.1"
 ]
 
@@ -39,5 +38,7 @@ boto = [
 ]
 
 [tool.setuptools]
-packages = ["rducb"]
 package-dir = { "rducb" = "RDUCB" }
+
+[tool.setuptools.packages.find]
+include = ["rducb*"]
