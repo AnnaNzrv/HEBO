@@ -31,6 +31,8 @@ dependencies = [
   "ruamel.yaml",
   "coloredlogs",
   "imageio",
+  "botorch==0.6.6",
+  "ConfigSpace==0.6.1"
 ]
 
 [project.optional-dependencies]
