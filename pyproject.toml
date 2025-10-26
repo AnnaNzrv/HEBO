@@ -37,8 +37,5 @@ boto = [
   "boto3==1.14.14"
 ]
 
-[tool.setuptools]
-package-dir = { "rducb" = "RDUCB" }
-
 [tool.setuptools.packages.find]
 include = ["rducb*"]

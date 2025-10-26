@@ -2,7 +2,7 @@ import numpy as np
 from functools import wraps
 from enum import Enum
 
-from rducb.hdbo.febo.utils import get_logger
+# from rducb.hdbo.febo.utils import get_logger
 from rducb.hdbo.febo.utils.config import ConfigField, Config, Configurable, assign_config, config_manager
 
 
@@ -11,7 +11,7 @@ class EnvironmentConfig(Config):
 
 # config_manager.register(EnvironmentConfig)
 
-logger = get_logger("environment")
+# logger = get_logger("environment")
 
 @assign_config(EnvironmentConfig)
 class Environment(Configurable):
