@@ -5,7 +5,7 @@ import numpy as np
 import sys
 import select
 import tty
-import termios
+#import termios
 from datetime import datetime
 import os.path
 import logging
@@ -159,7 +159,7 @@ class NonBlockingConsole(object):
 
     def __init__(self, interupt_keys=['\x1b']):
         self._interupt_keys = interupt_keys
-        self.old_settings = termios.tcgetattr(sys.stdin)
+        #self.old_settings = termios.tcgetattr(sys.stdin)
 
     def __enter__(self):
         self.start()
@@ -182,7 +182,8 @@ class NonBlockingConsole(object):
         return key_pressed
 
     def stop(self):
-        termios.tcsetattr(sys.stdin, termios.TCSADRAIN, self.old_settings)
+        #termios.tcsetattr(sys.stdin, termios.TCSADRAIN, self.old_settings)
+        pass
 
     def start(self):
         tty.setcbreak(sys.stdin.fileno())

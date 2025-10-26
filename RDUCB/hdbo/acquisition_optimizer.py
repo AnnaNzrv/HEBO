@@ -6,8 +6,8 @@ import logging
 import math
 from itertools import product
 
-from graph_utils import make_chordal, build_clique_graph
-from mlflow_logging import MlflowLogger
+from rducb.hdbo.graph_utils import make_chordal, build_clique_graph
+from rducb.hdbo.mlflow_logging import MlflowLogger
 from functools import reduce
 
 def chunks(l, n):
@@ -132,8 +132,8 @@ class MPAcquisitionOptimizer(AcquisitionOptimizer):
         # ==========================================
         while list(x_best) in [list(item) for item in self.evaluated_points]:
             logging.fatal("Selected point already evaluated, performing perturbation")
-            var = random.randint(0, len(x_best)-1)
-            up = random.randint(0,1)
+            var = np.random.randint(0, len(x_best)-1)
+            up = np.random.randint(0,1)
             i = np.where(self._domains[var] == x_best[var])[0]
             if i == 0 or (up == 1 and i < len(self._domains[var])-1):
                 x_best[var] = self._domains[var][i+1]

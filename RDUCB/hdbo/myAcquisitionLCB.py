@@ -2,7 +2,7 @@ from collections import defaultdict
 import math
 from GPyOpt.acquisitions import AcquisitionLCB
 import numpy as np
-import mlflow_logging
+import rducb.hdbo.mlflow_logging
 
 class MyAcquisitionLCB(AcquisitionLCB):
     def __init__(self, model, kernel, variables):

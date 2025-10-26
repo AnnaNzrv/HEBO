@@ -5,9 +5,9 @@ import networkx as nx
 import GPyOpt
 from GPyOpt.util.general import normalize
 from GPyOpt.optimization.acquisition_optimizer import AcquisitionOptimizer
-from myAcquisitionModular import MyAcquisitionModular
-from myGPModel import MyGPModel
-from acquisition_optimizer import MPAcquisitionOptimizer, BruteForceAcquisitionOptimizer
+from rducb.hdbo.myAcquisitionModular import MyAcquisitionModular
+from rducb.hdbo.myGPModel import MyGPModel
+from rducb.hdbo.acquisition_optimizer import MPAcquisitionOptimizer, BruteForceAcquisitionOptimizer
 from GPyOpt.core.evaluators.sequential import Sequential
 from GPyOpt.core.task.objective import SingleObjective
 from GPyOpt.core.task.cost import CostModel
@@ -33,7 +33,8 @@ class BOStopper(GPyOpt.core.BO):
         """
 
         if self.objective is None:
-            raise InvalidConfigError("Cannot run the optimization loop without the objective function")
+            #raise InvalidConfigError("Cannot run the optimization loop without the objective function")
+            raise ValueError("Cannot run the optimization loop without the objective function")
 
         # --- Save the options to print and save the results
         self.verbosity = verbosity

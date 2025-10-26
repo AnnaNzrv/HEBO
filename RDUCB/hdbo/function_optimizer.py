@@ -1,7 +1,7 @@
 import math
 import matplotlib.pyplot as plt
-from graph_utils import get_random_graph, sigmoid
-from common import Config
+from rducb.hdbo.graph_utils import get_random_graph, sigmoid
+from rducb.hdbo.common import Config
 from disjoint_set import DisjointSet
 from itertools import combinations, product 
 import itertools
@@ -11,8 +11,8 @@ import GPy
 import logging
 import random
 import scipy
-from myAcquisitionLCB import MyAcquisitionLCB
-from datasets import ComponentFunction, SyntheticComponentFunction
+from rducb.hdbo.myAcquisitionLCB import MyAcquisitionLCB
+from rducb.hdbo.datasets import ComponentFunction, SyntheticComponentFunction
 from functools import partial
 from GPy.inference.latent_function_inference import exact_gaussian_inference, expectation_propagation
 from GPy.models.gp_regression import likelihoods
@@ -21,7 +21,7 @@ from GPy.util import diag
 from functools import lru_cache
 # Alternative computation using sklearn's kernels
 import sklearn.gaussian_process
-from graph_utils import get_random_graph
+from rducb.hdbo.graph_utils import get_random_graph
 
 from functools import lru_cache
 

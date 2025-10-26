@@ -5,7 +5,7 @@ from io import StringIO
 from ruamel.yaml import YAML
 from ruamel.yaml.comments import CommentedMap
 
-from febo.utils import locate, get_logger
+from rducb.hdbo.febo.utils import locate, get_logger
 
 logger = get_logger('config')
 

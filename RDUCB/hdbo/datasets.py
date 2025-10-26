@@ -20,10 +20,10 @@ import os.path
 import h5py
 import json
 import sys
-import lpsolve_config
+import rducb.hdbo.lpsolve_config as lpsolve_config
 
-from common import Config
-from hpolib.benchmarks import synthetic_functions
+from rducb.hdbo.common import Config
+#from rducb.hdbo.febo.environment.benchmarks.hpolib.benchmarks import synthetic_functions
 from GPyOpt.core.task.space import Design_space
 
 def getDecompositionFromGraph(graph):
@@ -768,7 +768,7 @@ class ExecuteLassoBench(Function):
 
     """
     def __init__(self, pick_data, grid_size, fidelity=0, fixed_dims=0):
-        import LassoBench
+        import rducb.config.LassoBench as LassoBench
 
         self.f = LassoBench.RealBenchmark(pick_data=pick_data, mf_opt='discrete_fidelity')
 

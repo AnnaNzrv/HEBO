@@ -1,0 +1,50 @@
+name: rducb
+channels:
+  - conda-forge
+  - pytorch
+  - defaults
+channel_priority: strict
+
+dependencies:
+  # Core
+  - python=3.8
+  - pip=20
+
+  # Math stack (MKL-backed BLAS)
+  - libblas=*=*mkl
+  - numpy=1.18.5
+  - scipy=1.4.1
+  - cython=0.29.19
+
+  # IO / viz / utils
+  - h5py=2.10.0
+  - matplotlib=3.2.2
+  - psutil=5.7.0
+  - pyyaml
+  - ruamel.yaml
+  - coloredlogs
+  - imageio
+
+  # ML / Optim
+  - scikit-learn=0.23.2    
+  - cma
+  - lpsolve55
+  - gpy=1.9.9              
+  - gpyopt=1.2.6
+  - networkx=2.4          
+  - boto3=1.14.14
+
+  # PyTorch CPU-only (installing from the pytorch channel)
+  - pytorch
+  - torchvision
+  - cpuonly               
+
+  # Celery (here so it resolves against conda-forge pins)
+  - celery
+
+  - pip:
+      - disjoint-set==0.6.2
+      - pid==3.0.3
+      - ConfigSpace==0.4.11   
+      - noisyopt
+      - tensorflow==2.2.0     

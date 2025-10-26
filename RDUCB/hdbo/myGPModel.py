@@ -2,7 +2,7 @@ import math
 from GPyOpt.models.gpmodel import GPModel
 import numpy as np
 import logging
-from graph_utils import get_random_graph
+from rducb.hdbo.graph_utils import get_random_graph
 
 # This is the prior model
 class MyGPModel(GPModel):

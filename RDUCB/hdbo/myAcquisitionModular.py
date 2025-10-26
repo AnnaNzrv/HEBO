@@ -1,9 +1,9 @@
 import math
 import numpy as np
 import GPyOpt.util.stats as gpstats
-from datasets import ComponentFunction
-from myAcquisitionLCB import MyAcquisitionLCB
-import mlflow_logging
+from rducb.hdbo.datasets import ComponentFunction
+from rducb.hdbo.myAcquisitionLCB import MyAcquisitionLCB
+import rducb.hdbo.mlflow_logging
 from GPyOpt.acquisitions.base import AcquisitionBase
 import networkx as nx
 
